@@ -1,20 +1,21 @@
 import React from 'react';
-import { Jumbotron, Container } from 'reactstrap';
+import { Container, Row, Col } from 'reactstrap';
 
 class Profile extends React.Component {
   render() {
     return (
       <div>
-        <Jumbotron fluid id="jumbo1">
-          <Container>
-            <h1> Lorem Ipsum </h1>
-          </Container>
-        </Jumbotron>
-        <Jumbotron fluid id="jumbo2">
-          <Container>
-            <h1> Dolor Sit Amet </h1>
-          </Container>
-        </Jumbotron>
+        <Container id="bitmogi">
+          <Row>
+            <Col md="6">
+              <p class = "lead"> Hi I'm Dimitri, a Computer Science student at CUNY Queens College.  I built this site to teach myself ReactJS and to showcase my skills and projects.
+              </p>
+            </Col>
+            <Col md="6">
+              <img src={process.env.PUBLIC_URL + '/images/bitmogiHi.jpg'} alt="virtualID"/>
+            </Col>
+          </Row>
+        </Container>
       </div>
     )
   }

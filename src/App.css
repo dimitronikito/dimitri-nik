@@ -13,6 +13,14 @@
   pointer-events: none;
   margin-bottom: 12px;
 }
+#bitmogi {
+  text-align: center;
+}
+#bitmogi img {
+  max-width: 100%;
+  max-height: 40vh;
+  height: auto;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -26,8 +34,6 @@
 .jumbotron {
   text-align: center;
   background-color: white !important;
-  border-top: 1px solid #dfdfdf;
-  border-bottom: 1px solid #dfdfdf;
 }
 
 a {

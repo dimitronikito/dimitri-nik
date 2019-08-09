@@ -2,15 +2,17 @@ import React, { Component } from 'react';
 import './App.css';
 import TopBar from './components/TopBar';
 import Profile from './components/Profile';
+import Technologies from './components/Technologies';
 import Footer from './components/Footer';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div>
           <TopBar />
+        <div>
           <Profile />
+          <Technologies />
         </div>
         <Footer />
       </div>
