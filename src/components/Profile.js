@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import bitmogiHi from '../images/bitmogiHi.JPG';
 
 class Profile extends React.Component {
   render() {
@@ -12,7 +13,7 @@ class Profile extends React.Component {
               </p>
             </Col>
             <Col md="6">
-              <img src='/images/bitmogiHi.jpg' alt="virtualID"/>
+              <img src={bitmogiHi} alt="virtualID"/>
             </Col>
           </Row>
         </Container>
