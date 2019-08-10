@@ -9,7 +9,7 @@ class Profile extends React.Component {
         <Container id="bitmogi">
           <Row>
             <Col md="6">
-              <p class = "lead"> Hi I'm Dimitri, a Computer Science student at CUNY Queens College.  I built this site to teach myself ReactJS and to showcase my skills and projects.
+              <p className = "lead"> Welcome to my site! My name is Dimtri, a Computer Science major at CUNY Queens College.  I built this site to teach myself React and to showcase my skills and projects.
               </p>
             </Col>
             <Col md="6">

@@ -15,7 +15,7 @@ class Footer extends React.Component {
           <a href = "https://github.com/dimitronikito">
           <FontAwesomeIcon icon = {faGithub} />
           </a>
-          <img src = {logo} className = "App-logo" alt="built with react"/>
+          <img src = {logo} className = "App-logo" alt="built with react" title="built with react"/>
         </div>
       </footer>
     )
