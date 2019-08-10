@@ -12,7 +12,7 @@ class Profile extends React.Component {
               </p>
             </Col>
             <Col md="6">
-              <img src={process.env.PUBLIC_URL + '/images/bitmogiHi.jpg'} alt="virtualID"/>
+              <img src='/images/bitmogiHi.jpg' alt="virtualID"/>
             </Col>
           </Row>
         </Container>
