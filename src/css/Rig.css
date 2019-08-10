@@ -6,6 +6,7 @@
 
 #technologies {
   margin-top: 5vh;
+  margin-right: 4vh;
 }
 
 #rig li {
@@ -17,7 +18,7 @@
 .rig-cell {
     position: relative;
     overflow:hidden;
-    padding: 8px;
+    padding: 5%;
 }
 
 .rig-img {

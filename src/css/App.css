@@ -1,6 +1,14 @@
 * {
   font-family: 'Montserrat', sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+.top {
+  position: fixed;
+  right: 0;
+}
 .navbar-toggler:focus, .navbar-toggler:active {
   outline: none;
   box-shadow: none;
@@ -18,12 +26,13 @@
 }
 
 #intro {
-  margin-top: 50px;
+  margin-top: 75px;
 }
 
 #bitmogi {
   text-align: center;
 }
+
 #bitmogi img {
   max-width: 100%;
   max-height: 45vh;
@@ -45,7 +54,6 @@
 }
 
 #jumbo2 {
-  margin-right: 4.5%;
 }
 
 a {
