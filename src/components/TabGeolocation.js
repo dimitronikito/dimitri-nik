@@ -26,5 +26,5 @@ const mapStyles = {
 };
 
 export default GoogleApiWrapper({
-  apiKey: 'AIzaSyDmd1CPGNTCmcH_iSQBQpYHSdBKckL76UQ'
+  apiKey: process.env.REACT_APP_GOOGLE_KEY
 })(TabGeolocation);
