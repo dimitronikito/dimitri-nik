@@ -8,7 +8,7 @@ class Playground extends React.Component {
     return (
       <div id="playground">
         <h1> Playground </h1>
-        <Container id="bitmogi">
+        <Container id="bitsoccer">
           <Row>
             <Col md="6">
               <img src={bitPlayground} alt="virtualID"/>
