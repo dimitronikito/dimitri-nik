@@ -22,9 +22,9 @@ export class TabGeolocation extends React.Component {
 
 const mapStyles = {
   width: '100%',
-  height: '100%',
+  height: '95.5%',
 };
 
 export default GoogleApiWrapper({
-  apiKey: process.env.REACT_APP_GOOGLE_KEY
+  apiKey: 'AIzaSyDmd1CPGNTCmcH_iSQBQpYHSdBKckL76UQ'
 })(TabGeolocation);
