@@ -24,34 +24,22 @@ class Technologies extends React.Component {
               <div id = "technologies">
                 <ul id ="rig">
                   <Row>
-                    <RigCell rigtext="HTML" icon={html}>
-                    </RigCell>
-                    <RigCell rigtext="CSS" icon={css}>
-                    </RigCell>
-                    <RigCell rigtext="JavaScript" icon={javascript}>
-                    </RigCell>
-                    <RigCell rigtext="Bootstrap" icon={bootstrap}>
-                    </RigCell>
+                    <RigCell rigtext="HTML" icon={html}/>
+                    <RigCell rigtext="CSS" icon={css}/>
+                    <RigCell rigtext="JavaScript" icon={javascript}/>
+                    <RigCell rigtext="Bootstrap" icon={bootstrap}/>
                   </Row>
                   <Row>
-                    <RigCell rigtext="React" icon={react}>
-                    </RigCell>
-                    <RigCell rigtext="Express" icon={express}>
-                    </RigCell>
-                    <RigCell rigtext="MongoDB" icon={mongo}>
-                    </RigCell>
-                    <RigCell rigtext="NodeJS" icon={node}>
-                    </RigCell>
+                    <RigCell rigtext="React" icon={react}/>
+                    <RigCell rigtext="Express" icon={express}/>
+                    <RigCell rigtext="MongoDB" icon={mongo}/>
+                    <RigCell rigtext="NodeJS" icon={node}/>
                   </Row>
                     <Row>
-                    <RigCell rigtext="Python" icon={python}>
-                    </RigCell>
-                    <RigCell rigtext="Java" icon={java}>
-                    </RigCell>
-                    <RigCell rigtext="Github" icon={github}>
-                    </RigCell>
-                    <RigCell rigtext="Heroku" icon={heroku}>
-                    </RigCell>
+                    <RigCell rigtext="Python" icon={python}/>
+                    <RigCell rigtext="Java" icon={java}/>
+                    <RigCell rigtext="Github" icon={github}/>
+                    <RigCell rigtext="Heroku" icon={heroku}/>
                   </Row>
                 </ul>
               </div>

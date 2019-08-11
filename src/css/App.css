@@ -5,6 +5,10 @@
 html {
   scroll-behavior: smooth;
 }
+
+h1 {
+  text-align: center;
+}
 .top {
   position: fixed;
   right: 0;
@@ -51,9 +55,6 @@ html {
 .jumbotron {
   text-align: center;
   background-color: white !important;
-}
-
-#jumbo2 {
 }
 
 a {

@@ -5,7 +5,7 @@ import bitmogiHi from '../images/bitmogiHi.JPG';
 class Profile extends React.Component {
   render() {
     return (
-      <div>
+      <div id="intro">
         <Container id="bitmogi">
           <Row>
             <Col md="6">

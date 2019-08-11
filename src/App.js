@@ -4,16 +4,17 @@ import TopBar from './components/TopBar';
 import Profile from './components/Profile';
 import Technologies from './components/Technologies';
 import Footer from './components/Footer';
+import Playground from './components/Playground';
+import Contact from './components/Contact'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-          <TopBar />
-        <div>
-          <Profile />
-          <Technologies />
-        </div>
+        <TopBar />
+        <Profile />
+        <Technologies />
+        <Playground />
         <Footer />
       </div>
     );

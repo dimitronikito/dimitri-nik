@@ -22,7 +22,7 @@ class TopBar extends React.Component {
 
   render() {
     return (
-      <Navbar id="topofpage" light expand = 'md'>
+      <Navbar light expand = 'md'>
         <Container>
           <NavbarBrand href ="/">
             <span> Dimitri Nikitopoulos </span>
@@ -31,7 +31,7 @@ class TopBar extends React.Component {
           <Collapse isOpen = {this.state.isOpen} navbar>
             <Nav navbar>
               <NavItem>
-                <NavLink href = '/Profile'> Profile </NavLink>
+                <NavLink href = '#intro'> Profile </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href = '/Playground'> Playground </NavLink>
@@ -42,7 +42,7 @@ class TopBar extends React.Component {
             </Nav>
           </Collapse>
         </Container>
-        <NavbarBrand href="#topofpage" className="top">
+        <NavbarBrand href="#intro" className="top">
           <FontAwesomeIcon icon = {faArrowUp} />
         </NavbarBrand>
       </Navbar>
