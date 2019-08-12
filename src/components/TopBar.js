@@ -34,7 +34,7 @@ class TopBar extends React.Component {
                 <NavLink href = '#intro'> Profile </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href = '/Playground'> Playground </NavLink>
+                <NavLink href = '#playground'> Playground </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href = '/Contact'> Contact </NavLink>

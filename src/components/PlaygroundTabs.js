@@ -2,11 +2,12 @@ import React from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import classnames from 'classnames';
 import '../css/Playground.css'
-import TabGeolocation from './TabGeolocation';
-import TabGoogleSearch from './TabGoogleSearch';
-import TabQuoteGenerator from './TabQuoteGenerator';
-import TabSoccer from './TabSoccer';
-import TabWeather from './TabWeather';
+import TabGeolocation from './Tabs/TabGeolocation';
+import TabGoogleSearch from './Tabs/TabGoogleSearch';
+import TabQuoteGenerator from './Tabs/TabQuoteGenerator';
+import TabSoccer from './Tabs/TabSoccer';
+import TabWeather from './Tabs/TabWeather';
+import TabHeader from './Tabs/TabHeader';
 
 export default class PlaygroundTabs extends React.Component {
   constructor(props) {
@@ -72,6 +73,7 @@ export default class PlaygroundTabs extends React.Component {
         </Nav>
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
+            <TabHeader apiname=" Google Maps " />
             <TabGeolocation />
           </TabPane>
           <TabPane tabId="2">

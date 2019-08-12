@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import bitPlayground from '../images/bitPlayground.jpeg';
 import PlaygroundTabs from './PlaygroundTabs.js';
+import '../css/Playground.css';
 
 class Playground extends React.Component {
   render() {
@@ -13,7 +14,7 @@ class Playground extends React.Component {
             <Col md="6">
               <img src={bitPlayground} alt="virtualID"/>
             </Col>
-            <Col md="6" id="intro">
+            <Col md="6" id="playground-desc">
               <p className = "lead"> Messing around with some cool api's
               </p>
             </Col>
