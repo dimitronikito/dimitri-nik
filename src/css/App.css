@@ -9,9 +9,18 @@ html {
 h1 {
   text-align: center;
 }
+
 .top {
+  color: white;
   position: fixed;
   right: 0;
+  z-index: 1;
+  padding: 12px;
+  border-radius: 100%;
+  background-color: rgba(127, 127, 127, 0.5);
+}
+.top svg {
+  color: white;
 }
 .navbar-toggler:focus, .navbar-toggler:active {
   outline: none;

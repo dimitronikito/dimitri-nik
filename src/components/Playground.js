@@ -11,12 +11,12 @@ class Playground extends React.Component {
         <h1> Playground </h1>
         <Container id="bitsoccer">
           <Row>
+            <Col md="6" id="playground-desc">
+              <p className = "lead"> Messing around with some cool API's
+              </p>
+            </Col>
             <Col md="6">
               <img src={bitPlayground} alt="virtualID"/>
-            </Col>
-            <Col md="6" id="playground-desc">
-              <p className = "lead"> Messing around with some cool api's
-              </p>
             </Col>
           </Row>
         </Container>

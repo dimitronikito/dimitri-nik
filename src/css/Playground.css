@@ -1,5 +1,7 @@
-#tabs {
-  margin-bottom: 900px;
+.tab-pane {
+  height: 100vh;
+  z-index: 1;
+  position: relative;
 }
 
 #spinner {
@@ -17,4 +19,32 @@
   width: 100%;
   text-align: center;
   display: block;
+}
+
+#playground {
+  text-align: center;
+}
+
+#quotearea {
+  margin-top: 2%;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-bottom: 7%;
+}
+#quote {
+  font-family: cursive;
+  font-size: 3.3vw;
+}
+#author {
+  float: right;
+  font-size: 3.5vw;
+}
+#quotebox {
+  background-color: #f8f8f8 !important;
+  text-align: center;
+}
+#quotebox button {
+  padding: 2vh;
+  bottom: 7.6vh;
+  position: absolute;
 }

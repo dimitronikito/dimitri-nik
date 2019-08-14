@@ -1,10 +1,12 @@
 import React from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import { Spinner } from 'reactstrap';
 import '../../css/Playground.css'
 
 export class TabGeolocation extends React.Component {
-  state = { userLocation: { lat: 40.7128, lng: 74 }, loading: true };
+  state = { userLocation: { lat: 40.7128, lng: 74 },
+                            activeMarker: {},
+                            loading: true };
 
   componentDidMount(props) {
     navigator.geolocation.getCurrentPosition(
@@ -36,19 +38,22 @@ export class TabGeolocation extends React.Component {
     }
 
     return (
-      <Map
+        <Map
         google={ google }
         zoom={ 14 }
         style={ mapStyles }
         initialCenter={ userLocation }
-      />
+        >
+          <Marker
+          />
+        </Map>
     );
   }
 }
 
 const mapStyles = {
-  width: '100%',
-  height: '95.5%',
+  width: '100vw',
+  height: '80.5vh',
 };
 
 export default GoogleApiWrapper({

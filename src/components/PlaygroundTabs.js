@@ -28,14 +28,14 @@ export default class PlaygroundTabs extends React.Component {
   }
   render() {
     return (
-      <div id="tabs">
+      <div id = "projects">
         <Nav tabs>
           <NavItem>
             <NavLink
               className={classnames({ active: this.state.activeTab === '1' })}
               onClick={() => { this.toggle('1'); }}
             >
-              Geolocation
+              Quote Generator
             </NavLink>
           </NavItem>
           <NavItem>
@@ -43,7 +43,7 @@ export default class PlaygroundTabs extends React.Component {
               className={classnames({ active: this.state.activeTab === '2' })}
               onClick={() => { this.toggle('2'); }}
             >
-              Quote Generator
+              Geolocation
             </NavLink>
           </NavItem>
           <NavItem>
@@ -73,13 +73,15 @@ export default class PlaygroundTabs extends React.Component {
         </Nav>
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
-            <TabHeader apiname=" Google Maps " />
-            <TabGeolocation />
-          </TabPane>
-          <TabPane tabId="2">
+            <TabHeader apiname=" Forismatic.com " apidesc=" Click the button for some awesome quotes"/>
             <TabQuoteGenerator/>
           </TabPane>
+          <TabPane tabId="2">
+            <TabHeader apiname=" Google Maps " apidesc=" Shows your location on a map provided by google maps api"/>
+            <TabGeolocation/>
+          </TabPane>
           <TabPane tabId="3">
+            <TabHeader apiname=" OpenWeatherMap.com " apidesc=" Shows weather conditions in your area"/>
             <TabWeather/>
           </TabPane>
           <TabPane tabId="4">

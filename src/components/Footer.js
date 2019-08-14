@@ -9,10 +9,10 @@ class Footer extends React.Component {
     return (
       <footer>
         <div className = "footer">
-          <a href = "https://www.linkedin.com/in/dimitrios-nikitopoulos-343404137/">
+          <a taget="_blank" href = "https://www.linkedin.com/in/dimitrios-nikitopoulos-343404137/">
             <FontAwesomeIcon icon = {faLinkedin} />
           </a>
-          <a href = "https://github.com/dimitronikito">
+          <a raget="_blank" href = "https://github.com/dimitronikito">
             <FontAwesomeIcon icon = {faGithub} />
           </a>
           <img src = {logo} className = "App-logo" alt="built with react" title="built with react"/>

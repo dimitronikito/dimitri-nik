@@ -18,8 +18,8 @@ class Technologies extends React.Component {
   render() {
     return (
       <div className = "container-fluid">
-        <Jumbotron fluid id="jumbo2">
-          <Container fluid>
+        <Jumbotron fluid id = "jumbo2">
+          <Container fluid >
             <h1> Some technologies I'm familiar with: </h1>
               <div id = "technologies">
                 <ul id ="rig">

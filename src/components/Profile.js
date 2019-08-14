@@ -12,7 +12,7 @@ class Profile extends React.Component {
               <img src={bitmogiHi} alt="virtualID"/>
             </Col>
             <Col md="6" id="intro">
-              <p className = "lead"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <p className = "lead"> Welcome to my site!  My name is Dimitri and I am a computer science major at CUNY Queens College.  I created this site to showcase my skills and some of my work/projects. I chose to build this site with ReactJS because I was interested in learning the language and the best way to learn is to do!
               </p>
             </Col>
           </Row>

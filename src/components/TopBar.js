@@ -37,12 +37,15 @@ class TopBar extends React.Component {
                 <NavLink href = '#playground'> Playground </NavLink>
               </NavItem>
               <NavItem>
+                <NavLink href = '#projects'> Projects </NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink href = '/Contact'> Contact </NavLink>
               </NavItem>
             </Nav>
           </Collapse>
         </Container>
-        <NavbarBrand href="#intro" className="top">
+        <NavbarBrand href="#root" className="top">
           <FontAwesomeIcon icon = {faArrowUp} />
         </NavbarBrand>
       </Navbar>
