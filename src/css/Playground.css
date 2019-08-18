@@ -15,7 +15,7 @@
 
 .tab-head {
   margin-top: 3vh;
-  margin-bottom: 1vh;
+  margin-bottom: 3vh;
   width: 100%;
   text-align: center;
   display: block;
@@ -25,8 +25,8 @@
   text-align: center;
 }
 
+/* Quote */
 #quotearea {
-  margin-top: 2%;
   margin-left: 20vw;
   margin-right: 20vw;
   margin-bottom: 7%;
@@ -45,6 +45,40 @@
 }
 #quotebox button {
   padding: 2vh;
-  bottom: 7.6vh;
-  position: absolute;
+}
+
+/* Weather */
+#weatherarea {
+  padding-left: 8vw;
+  padding-right: 8vw;
+  display: inline-block;
+  background-color: rgba(256, 256, 256, .9);
+  border-radius: 100%;
+}
+
+#degree-buttons {
+  display: block;
+}
+
+#degree-buttons .btn {
+  font-size: 2vw;
+}
+
+#degreeC {
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+#degreeF {
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+#temp {
+  font-size: 8vw;
+}
+#weatherdesc {
+  font-size: 3vw;
+}
+#city {
+  font-size: 5vw;
 }
