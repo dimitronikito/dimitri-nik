@@ -75,20 +75,3 @@ a:hover {
   color: #173798;
   text-decoration: none;
 }
-
-.footer {
-  position: absolute;
-  margin-top: 5px;
-  border-top: #444;
-  text-align: center;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.footer a {
-  color: black;
-  font-size: 30px;
-  margin-right: 10px;
-  margin-left: 10px;
-}

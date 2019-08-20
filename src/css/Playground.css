@@ -1,4 +1,7 @@
 .tab-pane {
+  height: 100vh;
+  z-index: 1;
+  position: relative;
 }
 
 #spinner {
