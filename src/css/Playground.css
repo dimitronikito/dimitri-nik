@@ -1,7 +1,4 @@
 .tab-pane {
-  height: 100vh;
-  z-index: 1;
-  position: relative;
 }
 
 #spinner {
@@ -49,11 +46,11 @@
 
 /* Weather */
 #weatherarea {
-  padding-left: 8vw;
-  padding-right: 8vw;
+  color: white;
+  padding: 5vw;
   display: inline-block;
-  background-color: rgba(256, 256, 256, .9);
-  border-radius: 100%;
+  background-color: rgba(40, 50, 60, .75);
+  border-radius: 10%;
 }
 
 #degree-buttons {
@@ -74,11 +71,26 @@
 }
 
 #temp {
+  font-weight: bolder;
   font-size: 8vw;
 }
 #weatherdesc {
+  font-weight: bolder;
   font-size: 3vw;
 }
 #city {
+  font-weight: bolder;
   font-size: 5vw;
+}
+
+/* Google Search  */
+#search-results {
+  margin-top: 5vh;
+  text-align: left;
+}
+.result-url {
+  color: #006621;
+}
+#google-button {
+  margin:1%;
 }

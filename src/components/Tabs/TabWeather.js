@@ -1,7 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
-import { Button, ButtonGroup, Jumbotron } from 'reactstrap';
-import { Spinner } from 'reactstrap';
+import { Jumbotron, Spinner } from 'reactstrap';
 
 export default class TabWeather extends React.Component {
   constructor(props) {
@@ -48,7 +47,7 @@ export default class TabWeather extends React.Component {
           backgroundRepeat: "round"
         }}>
           <div fluid="true" id="weatherarea" >
-            <p className = "lead" id = "temp">  {temp} F </p>
+            <p className = "lead" id = "temp">  {temp}&#176; F </p>
             <p className = "lead" id = "city">  {city}</p>
             <p className = "lead" id = "weatherdesc">  {desc}</p>
           </div>

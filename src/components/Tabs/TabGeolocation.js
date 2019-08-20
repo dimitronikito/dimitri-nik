@@ -1,7 +1,6 @@
 import React from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import { Spinner } from 'reactstrap';
-import '../../css/Playground.css';
 
 export class TabGeolocation extends React.Component {
   state = { userLocation: { lat: 40.7128, lng: 74 },

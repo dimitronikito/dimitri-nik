@@ -81,10 +81,11 @@ export default class PlaygroundTabs extends React.Component {
             <TabGeolocation/>
           </TabPane>
           <TabPane tabId="3">
-            <TabHeader apiname=" OpenWeatherMap.com " apidesc=" Shows weather conditions in your area"/>
+            <TabHeader apiname=" OpenWeatherMap.com" apidesc=" Shows weather conditions in your area"/>
             <TabWeather/>
           </TabPane>
           <TabPane tabId="4">
+            <TabHeader apiname=" Google Custom Search Results " apidesc=" Search like you would on Google!"/>
             <TabGoogleSearch/>
           </TabPane>
           <TabPane tabId="5">

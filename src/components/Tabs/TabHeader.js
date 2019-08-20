@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../css/Playground.css';
 
 export default class TabHeader extends React.Component {
   render () {

@@ -1,14 +1,13 @@
 import React from 'react';
 import { Button, Jumbotron } from 'reactstrap';
 import $ from 'jquery';
-import '../../css/Playground.css';
 
 export default class TabQuoteGenerator extends React.Component {
   constructor(props) {
     super(props);
     this.getQuote = this.getQuote.bind(this);
     this.state = {
-      quoteText: "\"Speed gets you nowhere if you're going the wrong direction.\"",
+      quoteText: "\"It's always sunny above the clouds.\"",
       quoteAuthor: ""
     };
   }
@@ -21,13 +20,14 @@ export default class TabQuoteGenerator extends React.Component {
   }
 
   render() {
-    const {quoteText, quoteAuthor} = this.state;
+    var {quoteText, quoteAuthor} = this.state;
+    if (quoteAuthor === "-") quoteAuthor = "-Anonymous";
     return (
       <div>
         <Button color="primary" size="lg" block onClick={this.getQuote}> New Quote </Button>
         <Jumbotron fluid id="quotebox">
           <div id="quotearea">
-            <p className = "lead" id = "quote"> <span id="Lquote"> </span> {quoteText}</p>
+            <p className = "lead" id = "quote"> {quoteText}</p>
             <p className = "lead" id = "author"> {quoteAuthor}</p>
           </div>
         </Jumbotron>
