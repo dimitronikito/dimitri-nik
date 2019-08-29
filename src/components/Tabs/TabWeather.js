@@ -5,15 +5,13 @@ import { Jumbotron, Spinner, Button, ButtonGroup } from 'reactstrap';
 export default class TabWeather extends React.Component {
   constructor(props) {
     super(props);
-    this.getWeather = this.getWeather.bind(this);
+    this.toC = this.toC.bind(this);
     this.toF = this.toF.bind(this);
+    this.getWeather = this.getWeather.bind(this);
+
     this.state = {
-      desc: "",
-      temp: "",
-      city: "",
-      icon: "",
       loading: true,
-      units: 'F'
+      units: 'F',
     };
     navigator.geolocation.getCurrentPosition(this.getWeather);
   }
@@ -27,33 +25,36 @@ export default class TabWeather extends React.Component {
         response => this.setState({
         city: response.list[0].name,
         temp: Math.round(response.list[0].main.temp),
+        tempf: Math.round(response.list[0].main.temp),
+        tempc: Math.round(((response.list[0].main.temp) - 32) * (5/9)),
         desc: response.list[0].weather[0].description,
         icon: "http://openweathermap.org/img/w/" + response.list[0].weather[0].icon + ".png",
         loading: false
       }));
   }
 
-  toF() {
-    if (this.units === 'C') {
+  toC() {
+    if (this.state.units === 'F') {
+      console.log(this.state.temp);
       this.setState({
-        temp: this.temp * (5/9) + 32,
-        units: 'F'
+        temp: this.state.tempc,
+        units: 'C'
       });
     }
   }
 
-  toC() {
-    if (this.units === 'F') {
+  toF() {
+    if (this.state.units === 'C') {
+      console.log(this.state.temp);
       this.setState({
-        temp: (this.temp - 32) * (5/9),
-        units: 'C'
+        temp: this.state.tempf,
+        units: 'F'
       });
     }
   }
 
   render() {
     var {desc, temp, city, icon, loading, units} = this.state;
-
     if (loading) {
       return (
         <div id = "spinner">
