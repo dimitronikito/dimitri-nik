@@ -49,10 +49,11 @@
 
 /* Weather */
 #weatherarea {
+  width: 50vw;
   color: white;
   padding: 5vw;
   display: inline-block;
-  background-color: rgba(40, 50, 60, .75);
+  background-color: rgba(40, 50, 60, .97);
   border-radius: 10%;
 }
 

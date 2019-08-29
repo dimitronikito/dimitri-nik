@@ -1,17 +1,19 @@
 import React from 'react';
 import $ from 'jquery';
-import { Jumbotron, Spinner } from 'reactstrap';
+import { Jumbotron, Spinner, Button, ButtonGroup } from 'reactstrap';
 
 export default class TabWeather extends React.Component {
   constructor(props) {
     super(props);
     this.getWeather = this.getWeather.bind(this);
+    this.toF = this.toF.bind(this);
     this.state = {
       desc: "",
       temp: "",
       city: "",
       icon: "",
-      loading: true
+      loading: true,
+      units: 'F'
     };
     navigator.geolocation.getCurrentPosition(this.getWeather);
   }
@@ -30,8 +32,28 @@ export default class TabWeather extends React.Component {
         loading: false
       }));
   }
+
+  toF() {
+    if (this.units === 'C') {
+      this.setState({
+        temp: this.temp * (5/9) + 32,
+        units: 'F'
+      });
+    }
+  }
+
+  toC() {
+    if (this.units === 'F') {
+      this.setState({
+        temp: (this.temp - 32) * (5/9),
+        units: 'C'
+      });
+    }
+  }
+
   render() {
-    var {desc, temp, city, icon, loading} = this.state;
+    var {desc, temp, city, icon, loading, units} = this.state;
+
     if (loading) {
       return (
         <div id = "spinner">
@@ -47,16 +69,16 @@ export default class TabWeather extends React.Component {
           backgroundRepeat: "round"
         }}>
           <div fluid="true" id="weatherarea" >
-            <p className = "lead" id = "temp">  {temp}&#176; F </p>
+            <p className = "lead" id = "temp">  {temp}&#176; {units} </p>
             <p className = "lead" id = "city">  {city}</p>
             <p className = "lead" id = "weatherdesc">  {desc}</p>
+            <ButtonGroup>
+              <Button onClick={this.toC} color="danger" id = "degreeC"> C </Button>
+              <Button onClick={this.toF} color="primary" id = "degreeF"> F </Button>
+            </ButtonGroup>
           </div>
-
         </Jumbotron>
+
     )
-    // <ButtonGroup id="degree-buttons">
-    //   <Button color="danger" id = "degreeC"> C </Button>
-    //   <Button color="primary" id = "degreeF"> F </Button>
-    // </ButtonGroup>
   }
 }
