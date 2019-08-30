@@ -55,6 +55,7 @@ export default class TabQuoteGenerator extends React.Component {
         quote: this.state.quotes[this.state.pos + 1]
       });
     }
+    else this.getQuote();
   }
 
   render() {
