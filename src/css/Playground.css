@@ -2,6 +2,8 @@
   height: 100vh;
   z-index: 1;
   position: relative;
+  overflow: scroll;
+  margin-left: 2vw;
 }
 
 #spinner {
@@ -10,6 +12,7 @@
 }
 
 #playground-desc {
+  margin-top: 50px;
   text-align: center;
 }
 

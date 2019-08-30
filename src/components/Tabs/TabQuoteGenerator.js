@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup, Jumbotron } from 'reactstrap';
+import { Button, ButtonGroup, Jumbotron, Spinner } from 'reactstrap';
 import $ from 'jquery';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
@@ -20,7 +20,8 @@ export default class TabQuoteGenerator extends React.Component {
         'text': "\"It's always sunny above the clouds.\"",
         'author': ""
       }],
-      pos: 0
+      pos: 0,
+      loading: false
     };
   }
 
@@ -35,7 +36,8 @@ export default class TabQuoteGenerator extends React.Component {
             'text': "\"" + data["quoteText"]+"\"",
             'author': "-" + data["quoteAuthor"]
           }],
-          pos: this.state.quotes.length + 1
+          pos: this.state.quotes.length + 1,
+          loading: false
       }));
   }
 
@@ -59,9 +61,16 @@ export default class TabQuoteGenerator extends React.Component {
   }
 
   render() {
-    var {quote} = this.state;
+    var {quote, loading} = this.state;
     if (quote.author === "-") quote.author = "-Anonymous";
-
+    if (loading) {
+      return (
+        <div id = "spinner">
+          <Spinner style={{ width: '5rem', height:
+          '5rem'}} type="grow" color = "primary" />
+        </div>
+      )
+    }
     return (
       <div>
         <Button color="primary" size="lg" block onClick={this.getQuote}> New Quote </Button>

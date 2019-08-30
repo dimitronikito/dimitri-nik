@@ -4,8 +4,8 @@ import TopBar from './components/TopBar';
 import Profile from './components/Profile';
 import Technologies from './components/Technologies';
 import Playground from './components/Playground';
-// import Contact from './components/Contact';
-// import Footer from './components/Footer';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
@@ -15,6 +15,8 @@ class App extends Component {
         <Profile />
         <Technologies />
         <Playground />
+        <Contact />
+        <Footer />
       </div>
     );
   }

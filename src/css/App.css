@@ -75,3 +75,18 @@ a:hover {
   color: #173798;
   text-decoration: none;
 }
+
+footer {
+  text-align: center;
+  padding: 10px;
+}
+
+.footer svg{
+  color: #333;
+  font-size: 30px;
+  margin-left: 15px;
+}
+
+.footer svg:hover {
+  color: black;
+}

@@ -12,7 +12,7 @@ class Playground extends React.Component {
         <Container id="bitsoccer">
           <Row>
             <Col md="6" id="playground-desc">
-              <p className = "lead"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+              <p className = "lead"> This is where I play around with some cool api's.  Click on the tabs to try them out!
               </p>
             </Col>
             <Col md="6">

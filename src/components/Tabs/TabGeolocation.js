@@ -51,7 +51,7 @@ export class TabGeolocation extends React.Component {
 }
 
 const mapStyles = {
-  width: '100vw',
+  width: '98%',
   height: '80.5vh',
 };
 
