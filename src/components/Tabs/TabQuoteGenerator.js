@@ -28,11 +28,11 @@ export default class TabQuoteGenerator extends React.Component {
     $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?")
       .then(data => this.setState({
         quote: {
-          text: "\"" + data["quoteText"] + "\"",
+          text: "\"" + data["quoteText"]+"\"",
           author: "-" + data["quoteAuthor"],
         },
           quotes: [...this.state.quotes, {
-            'text': "\"" + data["quoteText"] + "\"",
+            'text': "\"" + data["quoteText"]+"\"",
             'author': "-" + data["quoteAuthor"]
           }],
           pos: this.state.quotes.length + 1
@@ -49,10 +49,10 @@ export default class TabQuoteGenerator extends React.Component {
   }
 
   handleRight() {
-    if (this.state.pos < this.state.quotes.length - 1) {
+    if (this.state.pos < this.state.quotes.length) {
       this.setState({
         pos: this.state.pos + 1,
-        quote: this.state.quotes[this.state.pos + 1]
+        quote: this.state.quotes[this.state.pos]
       });
     }
     else this.getQuote();
