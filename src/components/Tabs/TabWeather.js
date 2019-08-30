@@ -35,7 +35,6 @@ export default class TabWeather extends React.Component {
 
   toC() {
     if (this.state.units === 'F') {
-      console.log(this.state.temp);
       this.setState({
         temp: this.state.tempc,
         units: 'C'
@@ -45,7 +44,6 @@ export default class TabWeather extends React.Component {
 
   toF() {
     if (this.state.units === 'C') {
-      console.log(this.state.temp);
       this.setState({
         temp: this.state.tempf,
         units: 'F'

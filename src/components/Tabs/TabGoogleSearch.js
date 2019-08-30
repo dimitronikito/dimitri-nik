@@ -8,7 +8,7 @@ export default class TabGoogleSearch extends React.Component {
     this.googleSearch = this.googleSearch.bind(this);
     this.state = {
       data:[],
-      loading: false
+      loading: false,
     };
   }
 
@@ -28,7 +28,8 @@ export default class TabGoogleSearch extends React.Component {
       success: (response) => {
         this.setState({
           data: response.items,
-          loading: false
+          loading: false,
+          key: this.state.key + 1
         });
       },
       error: function(xhr) {
@@ -69,7 +70,7 @@ export default class TabGoogleSearch extends React.Component {
       )
     }
     return (
-      <Container fluid>
+      <Container>
           <Input autoComplete="off" bsSize="lg" id="google-button" type="text" />
           <Button size="lg" color="primary" onClick={this.googleSearch}>
             Google Search

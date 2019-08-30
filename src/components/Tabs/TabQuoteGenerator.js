@@ -8,37 +8,59 @@ export default class TabQuoteGenerator extends React.Component {
   constructor(props) {
     super(props);
     this.getQuote = this.getQuote.bind(this);
+    this.handleLeft = this.handleLeft.bind(this);
+    this.handleRight = this.handleRight.bind(this);
+
     this.state = {
-      quoteText: "\"It's always sunny above the clouds.\"",
-      quoteAuthor: "",
-      quotes:[]
+      quote: {
+        text: "\"It's always sunny above the clouds.\"",
+        author: ""
+      },
+      quotes: [{
+        'text': "\"It's always sunny above the clouds.\"",
+        'author': ""
+      }],
+      pos: 0
     };
   }
 
   getQuote() {
     $.getJSON("https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?")
       .then(data => this.setState({
-        quoteText: "\"" + data["quoteText"] + "\"",
-        quoteAuthor: "-" + data["quoteAuthor"]
+        quote: {
+          text: "\"" + data["quoteText"] + "\"",
+          author: "-" + data["quoteAuthor"],
+        },
+          quotes: [...this.state.quotes, {
+            'text': "\"" + data["quoteText"] + "\"",
+            'author': "-" + data["quoteAuthor"]
+          }],
+          pos: this.state.quotes.length + 1
       }));
   }
 
+  handleLeft() {
+    if (this.state.pos > 1) {
+      this.setState({
+        pos: this.state.pos - 1,
+        quote: this.state.quotes[this.state.pos - 2]
+      });
+    }
+  }
+
+  handleRight() {
+    if (this.state.pos < this.state.quotes.length - 1) {
+      this.setState({
+        pos: this.state.pos + 1,
+        quote: this.state.quotes[this.state.pos + 1]
+      });
+    }
+  }
+
   render() {
-    function Quote(text, author) {
-      this.text = text;
-      this.author = author;
-    }
-    var {quoteText, quoteAuthor} = this.state;
-    if (quoteAuthor === "-") quoteAuthor = "-Anonymous";
+    var {quote} = this.state;
+    if (quote.author === "-") quote.author = "-Anonymous";
 
-    var quote = new Quote(quoteText, quoteAuthor);
-
-    function handleLeft() {
-      console.log('left');
-    }
-    function handleRight() {
-      console.log('rigth');
-    }
     return (
       <div>
         <Button color="primary" size="lg" block onClick={this.getQuote}> New Quote </Button>
@@ -49,10 +71,10 @@ export default class TabQuoteGenerator extends React.Component {
           </div>
         </Jumbotron>
         <ButtonGroup>
-          <Button onClick = {handleLeft} color="primary">
+          <Button onClick = {this.handleLeft} color="primary">
             <FontAwesomeIcon icon = {faChevronLeft} />
           </Button>
-          <Button onClick = {handleRight} color="primary">
+          <Button onClick = {this.handleRight} color="primary">
             <FontAwesomeIcon icon = {faChevronRight} />
           </Button>
         </ButtonGroup>
