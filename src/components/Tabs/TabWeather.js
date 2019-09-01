@@ -72,8 +72,8 @@ export default class TabWeather extends React.Component {
             <p className = "lead" id = "city">  {city}</p>
             <p className = "lead" id = "weatherdesc">  {desc}</p>
             <ButtonGroup>
-              <Button onClick={this.toC} color="danger" id = "degreeC"> C </Button>
-              <Button onClick={this.toF} color="primary" id = "degreeF"> F </Button>
+              <Button onClick={this.toC} color="warning" id = "degreeC"> C </Button>
+              <Button onClick={this.toF} color="info" id = "degreeF"> F </Button>
             </ButtonGroup>
           </div>
         </Jumbotron>

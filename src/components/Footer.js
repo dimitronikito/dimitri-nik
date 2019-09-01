@@ -17,7 +17,7 @@ class Footer extends React.Component {
             <FontAwesomeIcon icon = {faGithub} />
           </a>
           <img src = {logo} className = "App-logo" alt="built with react" title="built with react"/>
-          <p class="lead" id="foot-desc"> Built with React for Chrome </p>
+          <p className="lead" id="foot-desc"> Built with React for Chrome </p>
         </div>
       </footer>
     )

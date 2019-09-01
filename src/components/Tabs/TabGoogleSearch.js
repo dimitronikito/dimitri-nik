@@ -1,15 +1,23 @@
 import React from 'react';
-import { Container, Button, Input, Spinner } from 'reactstrap';
+import { Container, Button, ButtonGroup, Input, Spinner } from 'reactstrap';
 import $ from 'jquery';
 
 export default class TabGoogleSearch extends React.Component {
   constructor(props) {
     super(props);
     this.googleSearch = this.googleSearch.bind(this);
+    this.clearResults = this.clearResults.bind(this);
     this.state = {
       data:[],
       loading: false,
     };
+  }
+
+  clearResults() {
+    this.setState({
+      data:[],
+      loading: false
+    });
   }
 
   googleSearch() {
@@ -72,9 +80,14 @@ export default class TabGoogleSearch extends React.Component {
     return (
       <Container>
           <Input autoComplete="off" bsSize="lg" id="google-button" type="text" />
-          <Button size="lg" color="primary" onClick={this.googleSearch}>
+          <ButtonGroup id="google-tab-buttons">
+          <Button color="primary" onClick={this.googleSearch}>
             Google Search
           </Button>
+          <Button color="danger" onClick={this.clearResults}>
+            Clear Results
+          </Button>
+          </ButtonGroup>
           {rows}
       </Container>
     )

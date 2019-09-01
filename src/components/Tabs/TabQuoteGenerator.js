@@ -72,7 +72,7 @@ export default class TabQuoteGenerator extends React.Component {
       )
     }
     return (
-      <div>
+      <div id="quotes">
         <Button color="primary" size="lg" block onClick={this.getQuote}> New Quote </Button>
         <Jumbotron fluid id="quotebox">
           <div id="quotearea">
