@@ -73,7 +73,7 @@ export default class PlaygroundTabs extends React.Component {
         </Nav>
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
-            <TabHeader apiname=" Forismatic.com API" apidesc=" Click the button for some awesome quotes"/>
+            <TabHeader apiname=" Forismatic.com API" apidesc=" Click the button for some awesome quotes!"/>
             <TabQuoteGenerator/>
           </TabPane>
           <TabPane tabId="2">
@@ -89,7 +89,7 @@ export default class PlaygroundTabs extends React.Component {
             <TabGoogleSearch/>
           </TabPane>
           <TabPane tabId="5">
-              <TabHeader apiname="data extracted from Livescores.com " apidesc=" Click the button to get and update soccer scores"/>
+              <TabHeader apiname="data extracted from Livescores.com " apidesc=" Click the button to get and update today's soccer scores!"/>
             <TabSoccer/>
           </TabPane>
         </TabContent>

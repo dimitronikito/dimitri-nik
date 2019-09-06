@@ -4,20 +4,18 @@ const axios = require("axios");
 const siteUrl = "http://www.livescores.com/";
 let siteName = "";
 
-var games = [];
-var times = [];
-var teams = [];
-var homeTeams = [];
-var awayTeams = [];
-var scores = [];
-var homeTeamScores = [];
-var awayTeamScores = [];
-
 function Match(time, homeTeam, awayTeam, score) {
   this.time = time;
   this.homeTeam = homeTeam;
   this.awayTeam = awayTeam;
   this.score = score;
+  this.active = function() {
+    if (this.time.includes('\'') || this.time.includes('HT'))
+      return 'in-progress';
+    else if (this.time.includes('FT'))
+      return "full-time";
+    else return "inactive";
+  };
 }
 
 const fetchData = async () => {
@@ -26,6 +24,15 @@ const fetchData = async () => {
 }
 
 const getScores = async () => {
+  var games = [];
+  var times = [];
+  var teams = [];
+  var homeTeams = [];
+  var awayTeams = [];
+  var scores = [];
+  var homeTeamScores = [];
+  var awayTeamScores = [];
+
   const $ = await fetchData();
 
   // get times
@@ -49,8 +56,9 @@ const getScores = async () => {
   for (var i = 0; i < scores.length; i++) {
     var match = new Match(times[i], homeTeams[i], awayTeams[i], scores[i]);
     games.push(match);
+    match.active = match.active();
   }
-  
+
   return games;
 }
 

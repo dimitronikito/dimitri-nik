@@ -109,3 +109,21 @@
 .result a {
   color: #007bff;
 }
+
+/* Soccer Scores */
+#scores button {
+  margin-bottom: 1vh;
+}
+
+#soccer-tab-button-group .btn {
+  margin-right: .5vw;
+  margin-left: .5vw;
+}
+
+.in-progress {
+  color: #d9534f;
+}
+
+.full-time {
+  color: #5cb85c;
+}

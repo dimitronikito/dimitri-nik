@@ -31,8 +31,9 @@ export default class Contact extends React.Component {
 
   onSubmit = (e) => {
     e.preventDefault();
+
     const {name, company, email, reason, message} = this.state;
-    axios.post('/', {name, company, email, reason, message }).then((result) => {
+    axios.post('/form-submit-url', {name, company, email, reason, message }).then((result) => {
       console.log(result);
     });
     this.toggle();
@@ -72,6 +73,7 @@ export default class Contact extends React.Component {
                   <option>Feedback</option>
                   <option>Report Bug/Problem</option>
                   <option>Enquire For Further Work</option>
+                  <option>New Tab Idea!</option>
                   <option>Other</option>
                 </Input>
               </FormGroup>

@@ -10,10 +10,13 @@ app.get("/scores", async function(req, res, next) {
   res.json(games);
 });
 
+app.post('/form-submit-url', function(req, res) {
+  console.log(JSON.parse(req.body));
+});
+
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/client/build.index.html'));
 });
-
 
 const port = process.env.PORT || 5000;
 app.listen(port);

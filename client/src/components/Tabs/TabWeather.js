@@ -57,7 +57,7 @@ export default class TabWeather extends React.Component {
       return (
         <div id = "spinner">
           <Spinner style={{ width: '5rem', height:
-          '5rem'}} type="grow" color = "primary" />
+          '5rem'}} type="grow" color = "info" />
         </div>
       )
     }
