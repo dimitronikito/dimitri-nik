@@ -12,7 +12,7 @@ class Playground extends React.Component {
         <Container id="bitsoccer">
           <Row>
             <Col md="6" id="playground-desc">
-              <p className = "lead"> This is where I play around with some cool api's.  Click on the tabs to try them out!
+              <p className = "lead"> Most of the tabs are the results from me playing around with some cool api's.  In the soccer tab I connected a node backend to extract the information since I couldn't find a decent api for livescores. Click on the tabs to try them out!
               </p>
             </Col>
             <Col md="6">

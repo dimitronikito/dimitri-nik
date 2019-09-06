@@ -73,22 +73,23 @@ export default class PlaygroundTabs extends React.Component {
         </Nav>
         <TabContent activeTab={this.state.activeTab}>
           <TabPane tabId="1">
-            <TabHeader apiname=" Forismatic.com " apidesc=" Click the button for some awesome quotes"/>
+            <TabHeader apiname=" Forismatic.com API" apidesc=" Click the button for some awesome quotes"/>
             <TabQuoteGenerator/>
           </TabPane>
           <TabPane tabId="2">
-            <TabHeader apiname=" Google Maps " apidesc=" Shows your location on a map provided by google maps api"/>
+            <TabHeader apiname=" Google Maps API" apidesc=" Shows your location on a map provided by google maps api"/>
             <TabGeolocation/>
           </TabPane>
           <TabPane tabId="3">
-            <TabHeader apiname=" OpenWeatherMap.com" apidesc=" Shows weather conditions in your area"/>
+            <TabHeader apiname=" OpenWeatherMap.com API" apidesc=" Shows weather conditions in your area"/>
             <TabWeather/>
           </TabPane>
           <TabPane tabId="4">
-            <TabHeader apiname=" Google Custom Search Results " apidesc=" Search like you would on Google!"/>
+            <TabHeader apiname=" Google Custom Search Results API" apidesc=" Search like you would on Google!"/>
             <TabGoogleSearch/>
           </TabPane>
           <TabPane tabId="5">
+              <TabHeader apiname="data extracted from Livescores.com " apidesc=" Click the button to get and update soccer scores"/>
             <TabSoccer/>
           </TabPane>
         </TabContent>
