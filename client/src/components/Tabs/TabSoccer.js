@@ -13,36 +13,42 @@ export default class TabSoccer extends React.Component {
       loading: false
     }
   }
+
   getScores = () => {
     this.setState({ loading: true });
     fetch('/scores')
       .then(res => res.json())
-      .then(games => this.setState({ games, loading: false }));
+      .then(games => this.setState({
+        games: games.allGames,
+        allGames: games.allGames,
+        activeGames: games.activeGames,
+        completedGames: games.completedGames,
+        loading: false }));
   }
 
   showActive() {
-    var activeGames = [];
-    for (var i in this.state.games) {
-      if (this.state.games[i].active === "in-progress")
-        activeGames.push(this.state.games[i]);
-    }
     this.setState({
-      games: activeGames
+      games: this.state.activeGames,
+      allGames: this.state.allGames,
+      activeGames: this.state.activeGames,
+      completedGames: this.state.completedGames,
     });
   }
   showAll() {
     this.setState({
-      games: this.state.games
-    });
+      games: this.state.allGames,
+      allGames: this.state.allGames,
+      activeGames: this.state.activeGames,
+      completedGames: this.state.completedGames,
+  });
   }
+
   showFinished() {
-    var completedGames = [];
-    for (var i in this.state.games) {
-      if (this.state.games[i].active === "full-time")
-        completedGames.push(this.state.games[i]);
-    }
     this.setState({
-      games: completedGames
+      games: this.state.completedGames,
+      allGames: this.state.allGames,
+      activeGames: this.state.activeGames,
+      completedGames: this.state.completedGames,
     });
 
   }
@@ -77,8 +83,18 @@ export default class TabSoccer extends React.Component {
         <Button size="lg" block color="warning" onClick={this.getScores}>
           Update Scores
         </Button>
-
-        <Table id="scoretable">
+        <ButtonGroup id="soccer-tab-button-group">
+          <Button outline color="success" onClick={this.showActive}>
+            In Progress
+          </Button>
+          <Button outline color="primary" onClick={this.showAll}>
+            Show All
+          </Button>
+          <Button outline color="danger" onClick={this.showFinished}>
+            Completed
+          </Button>
+        </ButtonGroup>
+        <Table responsive id="scoretable">
           <thead>
             <tr>
               <th> Time </th>
@@ -93,14 +109,3 @@ export default class TabSoccer extends React.Component {
     )
   }
 }
-// <ButtonGroup id="soccer-tab-button-group">
-// <Button outline color="danger" onClick={this.showActive}>
-//   In Progress
-// </Button>
-// <Button outline color="primary" onClick={this.showAll}>
-//   Show All
-// </Button>
-// <Button outline color="success" onClick={this.showFinished}>
-//   Completed
-// </Button>
-// </ButtonGroup>

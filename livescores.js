@@ -24,7 +24,7 @@ const fetchData = async () => {
 }
 
 const getScores = async () => {
-  var games = [];
+  var allGames = [];
   var times = [];
   var teams = [];
   var homeTeams = [];
@@ -55,11 +55,23 @@ const getScores = async () => {
 
   for (var i = 0; i < scores.length; i++) {
     var match = new Match(times[i], homeTeams[i], awayTeams[i], scores[i]);
-    games.push(match);
+    allGames.push(match);
     match.active = match.active();
   }
+  var activeGames = [];
+  var completedGames = [];
 
-  return games;
+  for (var i in allGames) {
+    if (allGames[i].active === "in-progress")
+      activeGames.push(allGames[i]);
+  }
+
+  for (var i in allGames) {
+    if (allGames[i].active === "full-time")
+      completedGames.push(allGames[i]);
+  }
+
+  return {activeGames, completedGames, allGames};
 }
 
 module.exports = getScores;
