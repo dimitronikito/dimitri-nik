@@ -41,22 +41,22 @@ export default class Contact extends React.Component {
   render() {
     const { name, company, email, reason, message } = this.state;
     return (
-      <Container fluid>
+      <Container>
       <Card id="contact" className ="container-fluid">
-        <Container id="bitcall">
+        <Container fluid id="bitcall">
           <Row>
             <Col md="6" id="contact-head">
               <h1> Contact Me </h1>
               <p className="lead"> Questions or comments?  Fill out the form below and I'll be sure to get back to you! </p>
             </Col>
             <Col id="bit-call" md="6">
-              <img src={bitCall} alt="virtualID"/>
+              <img src={bitCall} className="bitmoji" alt="bitmoji"/>
             </Col>
-          </Row>
+          </Row >
         </Container>
         <Form onSubmit={this.onSubmit}>
-          <Row>
-            <Col md="6">
+          <Row fluid="true">
+            <Col fluid="true" md="6">
               <FormGroup>
                 <Label for="name">Name*</Label>
                 <Input required type="name" name="name" id="name" placeholder="what do they call you?" value={name} onChange={this.onChange}/>

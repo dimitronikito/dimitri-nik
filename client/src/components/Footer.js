@@ -9,7 +9,7 @@ class Footer extends React.Component {
   render() {
     return (
       <footer>
-        <div className = "footer">
+        <div id="footer" className = "footer fluid">
           <a target="_blank" rel="noopener noreferrer" href = "https://www.linkedin.com/in/dimitrios-nikitopoulos-343404137/">
             <FontAwesomeIcon icon = {faLinkedin} />
           </a>

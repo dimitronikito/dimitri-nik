@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './css/App.css';
+import {Container} from 'reactstrap';
 import TopBar from './components/TopBar';
 import Profile from './components/Profile';
 import Technologies from './components/Technologies';
@@ -10,14 +11,14 @@ import Footer from './components/Footer';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <Container fluid className="App">
         <TopBar />
         <Profile />
         <Technologies />
         <Playground />
         <Contact />
         <Footer />
-      </div>
+      </Container>
     );
   }
 }

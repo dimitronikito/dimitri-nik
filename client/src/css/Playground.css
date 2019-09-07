@@ -1,5 +1,4 @@
 .tab-content {
-  background-color: rgb(250, 250, 255);
   height: 94vh;
   z-index: 1;
   position: relative;
@@ -28,6 +27,11 @@
 
 #playground {
   text-align: center;
+}
+
+.bitmoji {
+  padding-bottom: 3vh;
+  width: 80%;
 }
 
 /* Quote */

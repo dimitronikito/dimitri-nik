@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonGroup, Button, Table, Spinner } from 'reactstrap';
+import { Container, ButtonGroup, Button, Table, Spinner } from 'reactstrap';
 
 export default class TabSoccer extends React.Component {
   constructor(props) {
@@ -79,7 +79,7 @@ export default class TabSoccer extends React.Component {
     }
 
     return (
-      <div id="scores">
+      <Container fluid id="scores">
         <Button size="lg" block color="warning" onClick={this.getScores}>
           Update Scores
         </Button>
@@ -105,7 +105,7 @@ export default class TabSoccer extends React.Component {
           </thead>
           {matches}
         </Table>
-      </div>
+      </Container>
     )
   }
 }

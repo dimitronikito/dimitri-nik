@@ -16,7 +16,7 @@ class Playground extends React.Component {
               </p>
             </Col>
             <Col md="6">
-              <img src={bitPlayground} alt="virtualID"/>
+              <img src={bitPlayground} className="bitmoji" alt="bitmoji"/>
             </Col>
           </Row>
         </Container>
