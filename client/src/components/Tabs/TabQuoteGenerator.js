@@ -13,11 +13,11 @@ export default class TabQuoteGenerator extends React.Component {
 
     this.state = {
       quote: {
-        text: "\"It's always sunny above the clouds.\"",
+        text: "\"Speed gets you nowhere if you're heading the wrong way\"",
         author: ""
       },
       quotes: [{
-        'text': "\"It's always sunny above the clouds.\"",
+        'text': "\"Speed gets you nowhere if you're heading the wrong way\"",
         'author': ""
       }],
       pos: 0,

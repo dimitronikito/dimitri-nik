@@ -14,7 +14,11 @@
 
 #playground-desc {
   margin-top: 50px;
-  text-align: center;
+  text-align: justify;
+}
+
+#heart {
+  color: #ff0066;
 }
 
 .tab-head {
@@ -59,7 +63,7 @@
 
 /* Weather */
 #weatherarea {
-  width: 50vw;
+  width: 45vw;
   color: white;
   padding: 5vw;
   display: inline-block;

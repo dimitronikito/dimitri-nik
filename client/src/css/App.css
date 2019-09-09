@@ -12,6 +12,9 @@ h1 {
   text-align: center;
 }
 
+.section {
+  height: 100vh;
+}
 .top {
   color: white;
   position: fixed;
@@ -42,6 +45,7 @@ h1 {
 
 #intro {
   margin-top: 50px;
+  text-align:justify;
 }
 
 #bitmogi {

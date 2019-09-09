@@ -13,10 +13,10 @@ class App extends Component {
     return (
       <Container fluid className="App">
         <TopBar />
-        <Profile />
-        <Technologies />
-        <Playground />
-        <Contact />
+        <Profile/>
+        <Technologies/>
+        <Playground/>
+        <Contact/>
         <Footer />
       </Container>
     );

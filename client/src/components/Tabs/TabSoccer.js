@@ -81,7 +81,7 @@ export default class TabSoccer extends React.Component {
     return (
       <Container fluid id="scores">
         <Button size="lg" block color="warning" onClick={this.getScores}>
-          Update Scores
+          Get/Update Scores
         </Button>
         <ButtonGroup id="soccer-tab-button-group">
           <Button outline color="success" onClick={this.showActive}>
