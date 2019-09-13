@@ -10,9 +10,8 @@ app.get("/scores", async function(req, res, next) {
   res.json(games);
 });
 
-app.get('/form-submit-url', function(req, res) {
-  console.log(JSON.parse(req.body));
-  res.json(req.body);
+app.post('/form-submit-url', function(req, res) {
+  console.log(req.data);
 });
 
 app.get('*', (req, res) => {

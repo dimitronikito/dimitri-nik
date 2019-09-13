@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, Button, Modal, ModalHeader, Form, FormGroup, Label, Input, Row, Container, Col } from 'reactstrap';
 import '../css/Contact.css';
 import bitCall from '../images/bitCall.jpeg';
+import axios from 'axios';
 
 export default class Contact extends React.Component {
   constructor() {
@@ -32,18 +33,13 @@ export default class Contact extends React.Component {
     e.preventDefault();
 
     const {name, company, email, reason, message} = this.state;
-    console.log({name, company, email, reason, message });
-    fetch('./form-submit-url', {
-      method: "POST",
-      header: {
-        'Content-Type': 'application/json',
-        'Accept': "application/json"
-      },
-      body: {name, company, email, reason, message }})
-      .then((response) => response.json())
-      .then((result => {
-        console.log(result)
-      }));
+    axios({
+      method:'post',
+      url: '/form-submit-url',
+      data: { name, company, email, reason, message }
+    }).then((result) => {
+      console.log(result);
+    });
     this.toggle();
   }
   render() {
