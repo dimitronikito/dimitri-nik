@@ -36,6 +36,10 @@ export default class Contact extends React.Component {
     axios({
       method:'post',
       url: '/form-submit-url',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      },
       data: { name, company, email, reason, message }
     }).then((result) => {
       console.log(result.data);
