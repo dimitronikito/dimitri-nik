@@ -38,7 +38,7 @@ export default class Contact extends React.Component {
       url: '/form-submit-url',
       data: { name, company, email, reason, message }
     }).then((result) => {
-      console.log(result);
+      console.log(result.data);
     });
     this.toggle();
   }
