@@ -19,5 +19,10 @@
 
 #contact-head {
   margin-top: 5%;
+}
 
+#exampleText {
+  min-height: 5vh;
+  height: 17vh;
+  max-height: 25vh;
 }
