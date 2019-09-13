@@ -3,6 +3,7 @@ const path = require('path');
 const getScores = require("./livescores.js");
 
 const app = express();
+app.use(express.json());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 app.get("/scores", async function(req, res, next) {
