@@ -33,10 +33,11 @@ export default class Contact extends React.Component {
 
     const {name, company, email, reason, message} = this.state;
     console.log({name, company, email, reason, message });
-    fetch('/form-submit-url', {
+    fetch('./form-submit-url', {
       method: "POST",
       header: {
-        'Content-type': 'application/json',
+        'Content-Type': 'application/json',
+        'Accept': "application/json"
       },
       body: {name, company, email, reason, message }})
       .then((response) => response.json())
