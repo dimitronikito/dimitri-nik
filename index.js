@@ -19,9 +19,12 @@ app.get("/scores", async function(req, res, next) {
 
 app.post('/form-submit-url', function(req, res) {
   var data = req.body;
-  client.connect()
-    .then(() => client.query('INSERT INTO form_submissions(name, company, email, reason, message) VALUES (data.name, data.company, data.email, data.reason, data.message);'))
-    .then(client.end());
+  client.connect();
+  client.query('INSERT INTO form_submissions(name, company, email, reason, message) VALUES (data.name, data.company, data.email, data.reason, data.message);', (err, res) => {
+    if (err) throw err;
+    client.end();
+  });
+
 });
 
 app.get('*', (req, res) => {
