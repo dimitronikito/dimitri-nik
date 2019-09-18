@@ -20,7 +20,7 @@ app.get("/scores", async function(req, res, next) {
 app.post('/form-submit-url', function(req, res) {
   var data = req.body;
   client.connect()
-    .then(() =? client.query('INSERT INTO form_submissions(name, company, email, reason, message) VALUES (data.name, data.company, data.email, data.reason, data.message);'))
+    .then(() => client.query('INSERT INTO form_submissions(name, company, email, reason, message) VALUES (data.name, data.company, data.email, data.reason, data.message);'))
     .then(client.end();)
 });
 
