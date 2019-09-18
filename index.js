@@ -22,6 +22,9 @@ app.post('/form-submit-url', function(req, res) {
   client.connect();
   client.query('INSERT INTO form_submissions(name, company, email, reason, message) VALUES (data.name, data.company, data.email, data.reason, data.message);', (err, res) => {
     if (err) throw err;
+    for (let row of res.rows) {
+      console.log(JSON.stringify(row));
+    }
     client.end();
   });
 
