@@ -1,10 +1,16 @@
 const express = require('express');
 const path = require('path');
 const getScores = require("./livescores.js");
+const { Client } = require('pg');
 
 const app = express();
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'client/build')));
+
+const client = new Client({
+  connectionString: process.env.DATABSE_URL,
+  ssl: true,
+});
 
 app.get("/scores", async function(req, res, next) {
   const games = await getScores();
@@ -12,7 +18,10 @@ app.get("/scores", async function(req, res, next) {
 });
 
 app.post('/form-submit-url', function(req, res) {
-  console.log(req.body);
+  var data = req.body;
+  client.connect()
+    .then(() =? client.query('INSERT INTO form_submissions(name, company, email, reason, message) VALUES (data.name, data.company, data.email, data.reason, data.message);'))
+    .then(client.end();)
 });
 
 app.get('*', (req, res) => {
