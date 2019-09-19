@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'client/build')));
 
 const client = new Client({
-  connectionString: process.env.DATABSE_URL,
+  connectionString: 'postgres://znduykfbaumcuq:af1761ebd5c9efc74336754d4089918a8c515887e94c14e1a88c03439b8b7875@ec2-54-243-47-196.compute-1.amazonaws.com:5432/dfp3ogubc1j536',
   ssl: true,
 });
 
@@ -27,7 +27,6 @@ app.post('/form-submit-url', function(req, res) {
     }
     client.end();
   });
-
 });
 
 app.get('*', (req, res) => {
